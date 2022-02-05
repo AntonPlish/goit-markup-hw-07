@@ -1,0 +1,158 @@
+.page-footer {
+  background-color: $primary-background;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__info {
+    display: block;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 20px;
+
+    @extend %logo-font;
+  }
+
+  &__logo &__logo--accent {
+    color: $white-color;
+  }
+
+  &__contacts {
+    font-style: normal;
+  }
+
+  &__location {
+    color: $white-color;
+
+    @extend %footer-font-address;
+
+    margin-top: 0;
+    margin-bottom: 9px;
+  }
+
+  &__mail,
+  &__tel {
+    display: block;
+    color: $rgbawhite-color;
+
+    @extend %footer-font-address;
+
+    text-decoration: none;
+    outline: none;
+  }
+
+  &__mail {
+    margin-bottom: 9px;
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__social {
+    margin-left: 80px;
+  }
+
+  &__join {
+    @extend %footer-font-title;
+    margin: 12px 0 0 0;
+  }
+
+  &__links {
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+
+  &__network:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    background-color: $blue-color;
+  }
+
+  &__subscribe {
+    margin-left: 93px;
+  }
+
+  &__subtitle {
+    @extend %footer-font-title;
+    margin: 12px 0 20px 0;
+  }
+
+  &__block {
+    display: flex;
+  }
+
+  &__input {
+    background-color: $primary-background;
+    width: 358px;
+    height: 50px;
+    padding-left: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: none;
+
+    color: $white-color;
+  }
+
+  &__input::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &__button {
+    position: relative;
+  }
+
+  &__subbutton {
+    width: 200px;
+    height: 50px;
+    margin-left: 12px;
+    background: $blue-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    @extend %button-font;
+
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    padding: 10px 62px 10px 29px;
+    letter-spacing: 0.06em;
+    color: $white-color;
+  }
+
+  &__svg {
+    position: absolute;
+    top: 25%;
+    right: 0;
+    margin-right: 28px;
+
+    cursor: pointer;
+    fill: $white-color;
+  }
+}

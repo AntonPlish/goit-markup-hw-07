@@ -1,0 +1,139 @@
+/* Хэдер */
+
+.page-header {
+  border-bottom: 1px solid #ececec;
+
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    @extend %logo-font;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+  &__accent {
+    color: $primary-color;
+  }
+
+  &__nav {
+    display: flex;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    margin-left: 93px;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item + &__item {
+    margin-left: 50px;
+  }
+
+  &__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: $primary-color;
+    @extend %page-header-font;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    /* Другий варіант */
+    /* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $blue-color;
+    outline: none;
+  }
+  &__link--current {
+    color: $blue-color;
+  }
+
+  &__link--current::after {
+    display: block;
+    content: '';
+
+    position: absolute;
+    left: 0;
+    bottom: -1.1px;
+
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $blue-color;
+  }
+
+  /* Хэдер контакты */
+
+  &__contacts {
+    display: flex;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    margin-left: auto;
+  }
+
+  &__mail,
+  &__tel {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: $grey-color;
+    @extend %page-header-font;
+    outline: none;
+  }
+
+  &__mailicon {
+    width: 16px;
+    height: 12px;
+    margin-right: 8px;
+    fill: currentColor;
+  }
+
+  &__mail,
+  &__tel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    /* Другий варіант */
+    /* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  }
+
+  &__tel {
+    min-width: 122px;
+  }
+
+  &__telicon {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+
+  &__item + &__item {
+    margin-left: 50px;
+  }
+
+  &__mail:hover,
+  &__mail:focus,
+  &__tel:hover,
+  &__tel:focus {
+    color: $blue-color;
+  }
+}
